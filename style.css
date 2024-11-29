@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #353836;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 50px;
+background-color: #1d1f1d;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.logo__link {
+  color: #09c372;
+}
+
+.nav__list, .mobile-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  list-style-type: none;
+}
+
+.nav__item {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.nav__link {
+  color: #fff;
+}
+
+.nav__item:hover {
+  transform: scale(1.1);
+  transition: .3;
+}
+
+.login, 
+.signup {
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.login {
+  border: 1px solid #498afb;
+}
+
+.signup {
+  border: 1px solid #ff3860;
+}
+
+.login__link {
+  color: #ff3860;
+}
+
+.signup__link {
+  color: #498afb;
+}
+
+.mobile-nav {
+  display: none;
+  margin: auto 0;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  margin: 6px 0;
+  width: 35px;
+  height: 3px;
+  background-color: #fff;
+  transition: .4;
+}
+
+.open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  transform: rotate(-45deg) translate(-6px, -8px);
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+}
+
