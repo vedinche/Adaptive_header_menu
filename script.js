@@ -2,10 +2,7 @@ let burger = document.querySelector('.burger');
 let nav = document.querySelector('.nav');
 let navItems = nav.querySelectorAll('.nav__link');
 let header = document.querySelector('.header');
-let headerHeight = header.offsetHeight;
 let overlay = document.querySelector('.overlay');
-
-document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
 
 burger.addEventListener('click', () => {
   document.body.classList.toggle('stop-scroll');

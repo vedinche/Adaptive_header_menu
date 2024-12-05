@@ -1,11 +1,23 @@
-.page {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  height: 1000px;
+  background-image: url('https://cdn.pixabay.com/photo/2016/10/10/11/09/field-1728099_1280.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a {
@@ -17,63 +29,11 @@ img {
   max-width: 100%;
 }
 
-@font-face {
-  font-family: "NotoSans";
-  src: url("../fonts/NotoSans.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: "NotoSans";
-  src: url("../fonts/NotoSansBold.woff2") format("woff2");
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
-}
-
-.page__body {
+.list-reset {
   margin: 0;
   padding: 0;
-  min-width: 320px;
-  font-family: 'NotoSans', sans-serif;
-  font-weight: 400;
-  background-color: var(--main-bg);
-  min-height: 2000px;
-  overflow-x: hidden;
-}
-
-:root {
-  /* colors */
-  --main-bg: #fff;
-  --main-text: #000;
-  --second-text: #8d97a4;
-  --accent: #bd082a;
-  --accent-active: #8f0d24;
-  /* container */
-  --padding: 15px;
-  --max-width-container: 1440px;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 var(--padding);
-  max-width: var(--max-width-container);
-}
-
-.title {
-  margin: 0;
-  margin-bottom: 15px;
-  color: var(--main-text);
-}
-
-.title--main {
-  font-size: 50px;
-}
-
-.title--second {
-  font-size: 35px;
+  list-style: none;
 }
 
 .btn-reset {
@@ -83,106 +43,45 @@ img {
   cursor: pointer;
 }
 
-.btn {
-  border: none;
-  border-radius: 4px;
-  padding: 13px 25px;
-  font-family: inherit;
-  font-size: 20px;
-  color: var(--main-text);
-  background-color: var(--accent);
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.btn:hover {
-  background-color: var(--accent-active);
-}
-
-.list-reset {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.link {
-  font-size: 20px;
-  color: var(--main-text);
-  transition: color 0.3s ease-in-out;
-}
-
-.link:hover {
-  color: var(--accent);
-}
-
-.card {
-  border: 1px solid var(--second-text);
-  border-radius: 4px;
-  padding: 15px;
-  color: var(--main-text);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--padding);
-}
-
 .flex {
   display: flex;
-  flex-wrap: wrap;
 }
 
-.divider {
-  margin: 20px 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--second-text);
-}
-
-.input {
-  border: 1px solid var(--second-text);
-  border-radius: 4px;
-  padding: 0 20px;
-  width: 300px;
-  height: 50px;
-  font-family: inherit;
-  color: #fff;
-  background-color: transparent;
-}
-
-.input::placeholder {
-  color: var(--second-text);
-}
-
-.textarea {
-  border: 1px solid var(--second-text);
-  border-radius: 4px;
-  padding: 20px;
-  width: 300px;
-  font-family: inherit;
-  color: #fff;
-  background-color: transparent;
-}
-
-.textarea::placeholder {
-  color: var(--second-text);
-}
-
-/* header start */
-.header {
-  border-bottom: 1px solid var(--second-text);
-  padding: 20px 0;
-  color: var(--main-text);
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .header__container {
   align-items: center;
-  justify-content: space-between;
+  padding-bottom: 20px;
 }
 
-.nav__item {
-  margin-right: 30px;
+.logo {
+  display: block;
+  margin-right: auto;
+  width: 80px;
+  height: 80px;
+}
+
+.logo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nav__item:not(:last-child) {
+margin-right: 30px;
+}
+
+.nav__link {
+  font-size: 20px;
+}
+
+.nav__link:hover {
+  color: #656565;
 }
 
 .burger {
@@ -198,7 +97,7 @@ img {
   top: 50%;
   width: 100%;
   height: 2px;
-  background-color: var(--main-text);
+  background-color: #000;
   transform: translateY(-50%);
   transition: opacity .3s ease-in-out;
 }
@@ -210,7 +109,7 @@ img {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--main-text);
+  background-color: #000;
   transition: transform .3s ease-in-out, top .3s ease-in-out, bottom .3s ease-in-out;
 }
 
@@ -241,6 +140,6 @@ img {
   overflow: hidden;
 }
 
-
-
-
+.stop-scroll {
+  overflow: hidden;
+}
